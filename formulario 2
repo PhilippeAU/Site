@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UFT-8" lang="pt-br">
+        <title>Formulário</title>
+
+    </head>
+    <body>
+        <form>
+            <h1>Formulário de Cadrastro do Cliente </h1>
+            <label>Nome: </label>
+            <input type="text" id="nome" placeholder="Digite seu nome"><br>
+
+            <label for="email">email</label>
+            <input type="text" id="email" placeholder="Digite seu email">
+
+            <datalist id="Sexo">
+                <option value="Feminino">  
+                </option value="Masculino">
+
+            </datalist>
+            <p>Sexo: <input type="text" list="Sexo"/></p>
+
+            <fieldset>
+                <legend> Informções de Pagamento </legend>
+                <label for="">Cartão de Credito</label>
+                <input type="checkbox" name="formadepagamento" id="Cartão" value="Cartão">
+                <label for="pix"> PIX </label>
+                <input type="checkbox" name="formadepagamento" id="pix" value="Pix"> 
+
+            </fieldset> <br>
+            
+
+            <input type="submit" name="enviar" value="Cadastrar">
+            <input type="reset" name="limpar" value="Limpar">
+
+
+        </form>
+    </body>
+
+
+</html>

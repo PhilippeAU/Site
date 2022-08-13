@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title> Tudo sobre Google Glass </title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+    <script language="javascript" src="_javascript/funcoes.js"> </script>
+    <script>
+        function calc_total() {
+
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot = qtd * 1500;
+            document.getElementById('cTot').value = tot;
+}
+    </script>
+
+</head>
+
+<body>
+<div id="interface">    
+
+    <header id="cabecalho">
+    <hgroup>
+    <h1>>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+
+    <img id="icone" src="_imagens/contato.png">
+
+<nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="disc">
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-contato.png')"> <a href="./index.html"> Home </a> </li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="./specs.html"> Especificações </a> </li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="fotos.html"> Fotos </a> </li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="./multimidia.html"> Multimídia </a> </li>
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="./fale-conosco.html"> Fale conosco </a> </li>
+    </ul>
+    </nav>
+
+    </header>
+
+    <section id="corpo-full">
+
+        <article id="noticia-principal"> 
+            <header id="cabecalho-artigo"> 
+                <hgroup>
+                    <h3>Glass > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>Por Philippe Augusto</h2> 
+                    <h3 class="direita">Atualizado em 02/Outubro/2021</h3>
+            
+                </hgroup>
+            </header>    
+
+<form method="post" id="fContato" action="mailto:philippeaugusto96@gmail.com" oninput="calc_total();">
+             
+<fieldset id="usuario"> <legend> Identificação do Usuário </legend>
+    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo" ></p>
+    <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" placeholder="Digite Senha"> </p>
+    <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" placeholder="Digite E-mail" > </p>
+
+    <fieldset id="sexo"> <legend>Sexo</legend>
+        <input type="radio" name="tSexo" id="tMacs" > <label for="cMacs"> Masculino </label><br> 
+        <input type="radio" name="tSexo" id="tFem" > <label for="cFem"> Feminino </label> <br>
+        <input type="radio" name="tSexo" id="tOut" > <label for="cOut"> Outro </label>
+    </fieldset>
+    <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"> </p>
+</fieldset>
+
+
+<fieldset id="endereco"> <legend> Endereço do Usuário </legend>
+    <p> <label for="cRua"> Logradouro: </label> <input type="text" name="tRua" id="cRua" placeholder="Rua, Av, Trav, ...."> </p>
+    <p> <label for=""> Número: </label> <input type="number" name="tNum" id="cNum" placeholder="Digite Seu Número"> </p>
+    <p> <label for="cEst"> Estado: </label> <select name="tEst" id="cEst">
+        <optgroup label="Região Suldeste"> <option value="RJ"> Rio de Janeiro </option>
+        <option value="SP"> São Paulo </option>
+        <option value="MG">  Minas Gerais </option> </optgroup>
+
+        <optgroup label="Região Sul"> <option value="PR"> Paraná </option>
+        <option value="SC"> Santa Catarina</option>
+        <option value="RS"> Rio Grande do Sul</option> </optgroup>
+
+        <optgroup label="Região Nordeste"> <option value="PE"> Pernambuco </option>
+        <option value="BA"> Bahia </option>
+        <option value="CE"> Ceará </option>
+        <option value="SE"> Sergipe </option>
+        <option value="AL"> Alagoas </option> </optgroup>
+    </select> </p>
+    <p> <label for="cCid"> Cidade: </label> <input type="text" name="tCid" id="cCid" placeholder="Sua Cidade"></p>
+
+</fieldset>
+
+<fieldset id="mensagem"> <legend> Mensagem do Usuário </legend>
+    <p> <label for="cUrg"> Grau de Urgência: </label> Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10"> Máx </p>
+    <p> <label for="cMsg"> Mensagem: </label> <textarea name="tMsg" id="cMsg" cols="30" rows="5" placeholder="Digite sua mensagem"></textarea> </p>
+</fieldset>
+
+<fieldset id="pedido"> <legend> Quero um Google Glass </legend>
+    <p> <input type="checkbox" name="tPed" id="cPed"> <label for="cPed"> Gostaria de adquirir um Google Glass quando disponível </label> 
+    </p>
+    <p> <label for="cCor"> Cor: </label> <select name="tCor" id="cCor">
+        <option> Azul </option>
+        <option> Preto </option>
+        <option> Branco </option>
+        <option> Cinza </option>
+        <option> Verde </option>
+    </select>
+     </p>
+    <p> <label for="cQtd"> Quantidade: </label> <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"> </p>
+    <p> <label for="cTot"> Preço Total: R$ </label> <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly> </p>
+</fieldset>
+
+
+<input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+</form>   
+
+
+<footer id="rodape">
+    <p>Copyright 2021 - by Philippe Augusto <br/>
+    Instagram | Twitter</p> 
+    </footer>
+    
+</div>
+</body>
+</html>
